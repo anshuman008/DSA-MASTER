@@ -1,0 +1,178 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&family=Poppins:wght@100;200;300;400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap'); */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #151515;
+}
+
+
+.topicBox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    height: 50vh;
+    background-color: #151515;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.link-tab {
+    width: 30%;
+    height: 15vh;
+    margin: 10px;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .link-tab:hover {
+    transform: scale(1.1); /* You can adjust the scaling factor as per your preference */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for a more pronounced effect */
+  }
+  
+  .link-tab img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .link-tab:hover img {
+    transform: scale(1.1); /* Match the scaling factor on hover */
+  }
+
+  .progress{
+    width: 100px;
+    background-color: grey;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+  }
+  .progress-done{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: repeating-linear-gradient(
+      to  left,
+      #0546e0,
+      #1172f9,
+      #4892f9
+    );
+    box-shadow: 0 5px 5px -6px #0546ea, 0 3px 7px #1172f9;
+    border-radius: 20px;
+    color: #fff;
+    height: 100%;
+    width: 0;
+    transition: 1s ease 0.3s;
+  }
+
+  #notification{
+    position: absolute;
+     top: 30px;
+     right: 30px;
+     display: flex;
+     align-items: flex-end;
+     flex-direction: column;
+     overflow: hidden;
+     padding: 20px;
+  }
+
+  .toast{
+    width: 300px;
+    height: 55px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: larger;
+  }
+
+  .toast i{
+     margin: 0 20px;
+     font-size: 35px;
+     color: green;
+  }
+
+  .toast::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anim 2s linear forwards;
+  }
+
+  @keyframes anim{
+    100%{
+      width: 0;
+    }
+  }
+
+  .toast.removed i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+  }
+
+.toast.removed::after{
+  background: red;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .topicBox {
+    width: 90vw;
+  }
+
+  .link-tab {
+    width: 100%;
+  }
+
+  .progress {
+    width: 100%;
+  }
+
+  #notification {
+    top: 10px;
+    right: 10px;
+  }
+
+  .toast {
+    width: 90%;
+  }
+}
