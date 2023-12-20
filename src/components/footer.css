@@ -1,0 +1,13 @@
+.footer{
+ 
+}
+
+.footer:hover{
+  color: #00f124;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 5px;
+  /* write transform form code */
+  transform: translate(0px, -5px);
+  transition: 0.5s;
+}

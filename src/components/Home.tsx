@@ -3,7 +3,7 @@ import "./Home.css"
 import Data from "../database/DataBase"
 import { Button, Card, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import Footer from "./Footer";
 
 const storedData = JSON.parse(localStorage.getItem('data')) || Data;
 
@@ -20,7 +20,7 @@ function HomePage(){
        
 
          <TopicDiv  storedData={storedData}/>
-
+ <Footer/>
     </div>
 }
 
