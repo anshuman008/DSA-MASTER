@@ -66,11 +66,14 @@ function QueList() {
 
   return (
     <div className="main-container">
+   
       <Typography variant="h2" style={{ fontWeight: "bolder", color: "white" }}>
         450 DSA <span style={{color:"#32CD32"}}>MASTER</span>
       </Typography>
+   
+     
       <Typography variant="body1" color="white" fontSize={'1.2rem'}>
-        {topic.topicName}: {count}/{topic.questions?.length}
+         <Link style={{color:"red"}} to={"/"}>Topics</Link>   / {topic.topicName}: {count}/{topic.questions?.length}
       </Typography>
 
       <div id="notification">
